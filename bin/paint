@@ -2,3 +2,20 @@
 var args = process.argv;
 var path = require("path");
 var paint = require("../lib/print");
+if(args && args.length>2){
+    if(/^-[a-z]+/i.test(args[2])){
+		var url=path.normalize(path.resolve(args[3]));
+		global.base = path.dirname(url);
+		paint.doit(url,args[2]);
+	}else{
+		var url=path.normalize(path.resolve(args[2]));
+		global.base = path.dirname(url);
+		paint.doit(url);
+	}
+	
+}else{
+	console.log("paint ${path}");
+	console.log("paint -t ${path}        打印树状目录结构");
+	console.log("paint -p ${path}        打印层次目录结构");
+	process.exit(0);
+} 

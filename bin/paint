@@ -1,0 +1,4 @@
+#! /usr/bin/env node
+var args = process.argv;
+var path = require("path");
+var paint = require("../lib/print");

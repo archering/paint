@@ -5,7 +5,7 @@
   "main": "bin/paint",
   "preferGlobal": "true",
   "bin": {
-    "ske": "bin/paint"
+    "paint": "bin/paint"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
